@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:timetracker_app/tree.dart' hide getTree;
-import 'package:timetracker_app/page_intervals.dart';
-import 'package:timetracker_app/requests.dart';
+import 'package:timetracker_flutter/tree.dart' hide getTree;
+import 'package:timetracker_flutter/page_intervals.dart';
+import 'package:timetracker_flutter/requests.dart';
 import 'dart:async';
 
 

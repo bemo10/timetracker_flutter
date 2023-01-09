@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:timetracker_app/page_activities.dart';
+import 'package:timetracker_flutter/page_activities.dart';
 
 void main() => runApp(MyApp());
 

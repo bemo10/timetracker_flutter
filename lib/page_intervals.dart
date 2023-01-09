@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:timetracker_app/tree.dart' as Tree hide getTree;
+import 'package:timetracker_flutter/tree.dart' as Tree hide getTree;
 // to avoid collision with an Interval class in another library
-import 'package:timetracker_app/requests.dart';
+import 'package:timetracker_flutter/requests.dart';
 import 'dart:async';
 
 
