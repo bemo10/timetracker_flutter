@@ -1,3 +1,4 @@
+/*
 import 'package:flutter/material.dart';
 import 'package:timetracker_flutter/tree.dart' as Tree hide getTree;
 // to avoid collision with an Interval class in another library
@@ -45,7 +46,7 @@ class _PageIntervalsState extends State<PageIntervals> {
         if (snapshot.hasData) {
           return Scaffold(
               appBar: AppBar(
-                  title: Text(snapshot.data!.root.name!),
+                  title: Text(snapshot.data!.root.name),
                   actions: <Widget>[
                     IconButton(icon: Icon(Icons.home),
                         onPressed: () {
@@ -99,3 +100,5 @@ class _PageIntervalsState extends State<PageIntervals> {
     });
   }
 }
+
+*/

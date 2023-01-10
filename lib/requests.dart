@@ -23,14 +23,14 @@ Future<Tree> getTree(int id) async {
   // execution continues (leaves this function) until response is available,
   // and then we come back here
   if (response.statusCode == 200) {
-    print("statusCode=$response.statusCode");
-    print(response.body);
+    //print("statusCode=$response.statusCode");
+    //print(response.body);
     // If the server did return a 200 OK response, then parse the JSON.
     Map<String, dynamic> decoded = convert.jsonDecode(response.body);
     return Tree(decoded);
   } else {
     // If the server did not return a 200 OK response, then throw an exception.
-    print("statusCode=$response.statusCode");
+    //print("statusCode=$response.statusCode");
     throw Exception('Failed to get children');
   }
 }
@@ -48,6 +48,28 @@ Future<void> start(int id) async {
 
 Future<void> stop(int id) async {
   String uri = "$baseUrl/stop?$id";
+  final response = await client.get(Uri.parse(uri));
+  if (response.statusCode == 200) {
+    print("statusCode=$response.statusCode");
+  } else {
+    print("statusCode=$response.statusCode");
+    throw Exception('Failed to get children');
+  }
+}
+
+Future<void> createProject(int parentId, String name) async {
+  String uri = "$baseUrl/create_project?$parentId?$name";
+  final response = await client.get(Uri.parse(uri));
+  if (response.statusCode == 200) {
+    print("statusCode=$response.statusCode");
+  } else {
+    print("statusCode=$response.statusCode");
+    throw Exception('Failed to get children');
+  }
+}
+
+Future<void> createTask(int parentId, String name) async {
+  String uri = "$baseUrl/create_task?$parentId?$name";
   final response = await client.get(Uri.parse(uri));
   if (response.statusCode == 200) {
     print("statusCode=$response.statusCode");

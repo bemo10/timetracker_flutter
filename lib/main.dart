@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
             bodyText2:TextStyle(fontSize:20.0)),
       ),
       home: PageActivities(id:0),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

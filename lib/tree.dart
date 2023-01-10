@@ -8,7 +8,7 @@ final DateFormat _dateFormatter = DateFormat("yyyy-MM-dd HH:mm:ss");
 
 abstract class Activity {
   late int id;
-  late String name;
+  String? name;
   DateTime? initialDate;
   DateTime? finalDate;
   late int duration;
@@ -44,6 +44,7 @@ class Project extends Activity {
 
 class Task extends Activity {
   late bool active;
+
   Task.fromJson(Map<String, dynamic> json) : super.fromJson(json) {
     active = json['active'];
     for (Map<String, dynamic> jsonChild in json['intervals']) {
@@ -52,8 +53,16 @@ class Task extends Activity {
   }
 }
 
+class Interval extends Activity {
+  late bool active;
 
-class Interval {
+  Interval.fromJson(Map<String, dynamic> json) : super.fromJson(json) {
+    active = json['active'];
+  }
+}
+
+
+/*class Interval {
   late int id;
   DateTime? initialDate;
   DateTime? finalDate;
@@ -66,7 +75,7 @@ class Interval {
         finalDate = json['finalDate']==null ? null : _dateFormatter.parse(json['finalDate']),
         duration = json['duration'],
         active = json['active'];
-}
+}*/
 
 
 class Tree {
